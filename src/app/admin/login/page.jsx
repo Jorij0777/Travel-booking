@@ -10,7 +10,7 @@ export default function AdminLogin() {
   const [password, setPassword] = useState("");
 
   const login = () => {
-    if (email === "admin@example.com" && password === "admin123") {
+    if (email === "admin@gmail.com" && password === "admin123") {
       Cookies.set("token", "admin-token", { expires: 1 / 24 }); // 1 hour
       toast.success("Login successful");
       router.push("/admin/dashboard");
