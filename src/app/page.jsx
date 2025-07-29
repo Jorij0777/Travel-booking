@@ -26,13 +26,12 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white px-4 py-8">
+    <div className="min-h-screen bg-gradient-to-b from-green-50 via-yellow-50 to-pink-50 px-4 py-8">
       {/* Hero Section */}
       <section className="text-center mb-14">
-        <h1 className="text-5xl font-extrabold text-blue-800 mb-4">🌍 Welcome to Tripzy</h1>
+        <h1 className="text-5xl font-extrabold text-teal-700 mb-4">🌍 Welcome to Tripzy</h1>
         <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-          Discover your next escape with hand-picked travel experiences designed for dreamers,
-          adventurers, and explorers. ✈️✨
+          Discover your next escape with joyful travel experiences made for dreamers and explorers. ✈️🌞
         </p>
         <p className="text-sm mt-2 text-gray-500 italic">
           “Travel is the only thing you buy that makes you richer.”
@@ -40,7 +39,7 @@ export default function Home() {
         <div className="mt-6">
           <Link
             href="#packages"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full text-lg transition"
+            className="inline-block bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-full text-lg transition"
           >
             Start Exploring
           </Link>
@@ -54,7 +53,7 @@ export default function Home() {
           value={search}
           onChange={(e) => handleSearch(e.target.value)}
           placeholder="🔍 Search by destination, place, or keyword..."
-          className="w-full px-5 py-3 rounded-xl border shadow focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
+          className="w-full px-5 py-3 rounded-xl border border-teal-200 shadow focus:outline-none focus:ring-2 focus:ring-teal-400 text-gray-700"
         />
       </div>
 
@@ -69,7 +68,7 @@ export default function Home() {
             <Link
               key={pkg.id}
               href={`/packages/${pkg.id}`}
-              className="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden"
+              className="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden border border-pink-100"
             >
               <img
                 src={pkg.image}
@@ -77,19 +76,19 @@ export default function Home() {
                 className="w-full h-56 object-cover"
               />
               <div className="p-5">
-                <h3 className="text-2xl font-semibold text-blue-800">{pkg.title}</h3>
+                <h3 className="text-2xl font-semibold text-teal-700">{pkg.title}</h3>
                 <p className="text-gray-600 text-sm mt-2 line-clamp-3">
                   {pkg.description}
                 </p>
 
                 <div className="mt-4 flex items-center justify-between">
-                  <span className="text-green-600 font-bold text-lg">💰 ${pkg.price}</span>
-                  <span className="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">
+                  <span className="text-green-500 font-bold text-lg">💰 ${pkg.price}</span>
+                  <span className="bg-yellow-100 text-yellow-700 text-xs px-3 py-1 rounded-full">
                     📅 {pkg.date}
                   </span>
                 </div>
 
-                <button className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg transition">
+                <button className="mt-4 w-full bg-teal-500 hover:bg-teal-600 text-white py-2 rounded-lg transition">
                   Book Now →
                 </button>
               </div>
@@ -99,8 +98,8 @@ export default function Home() {
       </section>
 
       {/* Call to Adventure */}
-      <div className="mt-20 text-center bg-blue-100 py-10 rounded-2xl shadow-inner">
-        <h2 className="text-3xl font-bold text-blue-700 mb-2">
+      <div className="mt-20 text-center bg-pink-100 py-10 rounded-2xl shadow-inner">
+        <h2 className="text-3xl font-bold text-teal-700 mb-2">
           Ready for the journey of a lifetime?
         </h2>
         <p className="text-gray-700 mb-4">
@@ -108,7 +107,7 @@ export default function Home() {
         </p>
         <Link
           href="#packages"
-          className="inline-block bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-full text-lg transition"
+          className="inline-block bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-full text-lg transition"
         >
           Explore Packages
         </Link>
